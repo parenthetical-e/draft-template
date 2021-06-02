@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.4 (15/5/16)
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% Mddfied by:
+% Erik Peterson
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[twoside,twocolumn]{article}
+
+% Platino prett-i-ness
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+
+% Document margins
+\usepackage[hmarginratio=1:1,top=22mm,columnsep=20pt]{geometry} 
+% Custom captions under/above floats in tables or figures
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} 
+% Horizontal rules in tables
+\usepackage{booktabs} 
+% The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{lettrine} 
+
+% Customized lists
+\usepackage{enumitem} 
+% Make itemize lists more compact
+\setlist[itemize]{noitemsep} 
+
+% Allows abstract customization
+\usepackage{abstract} 
+% Set the "Abstract" text to bold
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+% Set the abstract itself to small italic text
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} 
+
+% Allows customization of titles
+\usepackage{titlesec} 
+% Roman numerals for the sections
+\renewcommand\thesection{\Roman{section}} 
+% roman numerals for subsections
+\renewcommand\thesubsection{\roman{subsection}} 
+
+ % Change the look of the section titles
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{}
+ % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{}
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+
+% Custom header text - chnage me
+\fancyhead[C]{Running title $\bullet$ May 2016 $\bullet$ Vol. XXI, No. 1} 
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+\usepackage[hidelinks]{hyperref} % For hyperlinks in the PDF
+\usepackage{authblk} % Easy authors
+
+%---------------------------------------------------------------------------
+% Title section
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+\pretitle{\begin{center}\huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Exploration or learning or something good} % Article title
+\author[1]{Erik J. Peteron\thanks{erik.exists@gmail.com}}
+% \author[2]{Timothy Verstynen}
+\affil[1]{Department of Psychology, Carnegie Mellon University}
+% \affil[2]{Department of Psychology, Carnegie Mellon University}
+% \affil[2]{Department of Biology, University Y}
+\date{} % Leave empty to omit a date
+
+%---------------------------------------------------------------------------
+% Abstract
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+\noindent Get to the point. Why do I care? What did I do? Why does it matter?
+\end{abstract}
+}
+
+%---------------------------------------------------------------------------
+% Paper!
+\begin{document}
+\maketitle
+\section{Introduction}
+
+\lettrine[nindent=0em,lines=3]{H} ere is a simple idea and a minor revolution in learning \cite{Wolpert1997a}. 
+
+
+\section{Methods}
+Probably math aand python.
+
+
+\section{Results}
+How wonderful they should be to be here.
+
+
+\section{Discussion}
+Fuck tradition so just do a Q and A.
+
+%---------------------------------------------------------------------------
+%	Refs
+\medskip
+{
+\small
+\bibliographystyle{plain}
+\bibliography{library}
+}
+
+%---------------------------------------------------------------------------
+\section{Appendix}
+Math goes here.
+
+%---------------------------------------------------------------------------
+\end{document}
